@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    
+    <div> 
+        @helper displayList(string[] list) {
+if (list.Length == 0)
+    {
+
+
+<label>list is empty</label>
+    }
+    else
+    {
+        <ul>
+            @foreach(var item in list)
+        {
+            <li>@item</li>
+        }
+        </ul>
+    }
+    }
+        <div>
+            <label>List of Names</label>
+            <div>
+                @displayList(new string[] { "Goku", "Vegeta", "Ichigo", "Light", "Edward" });
+            </div>
+        </div>
+        <div>
+            <label>Programming Languages</label>
+            <div>
+                @displayList(new string[] { "ASP.net", "Java", "Nodejs" });
+            </div>
+        </div>
+        <div>
+            @displayList(new string[] { });
+        </div>
+    </div>
+</body>
+</html>

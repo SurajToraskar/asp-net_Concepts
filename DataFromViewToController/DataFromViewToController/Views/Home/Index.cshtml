@@ -1,0 +1,70 @@
+﻿@model DataFromViewToController.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PostUsingParameters</title>
+</head>
+<body>
+    <div> 
+        <section>
+            <h4>Pass data using Params</h4>
+            @using (Html.BeginForm("PostUsingParameters", "Home"))
+            {
+                <input type="text" name="firstName" /><br/>
+                <input type="text" name="lastName"/><br/>
+                <br/>
+                <br/>
+                <input type="submit" value="Submit" />
+
+            }
+        </section>
+    </div>
+    <hr/>
+    <div>
+        <section>
+            <h4>Pass data using Request</h4>
+            @using (Html.BeginForm("PostUsingRequest", "Home"))
+            {
+                <input type="text" name="firstName"/><br/>
+                <input type="text" name="lastName"/><br/>
+                <br/>
+                <br/>
+                <input type="submit" value="submit"/>
+            }
+        </section>
+    </div>
+    <hr/>
+    <div>
+        <section>
+            <h4>Pass data using Request</h4>
+            @using (Html.BeginForm("PostUsingFormCollection", "Home"))
+            {
+                <input type="text" name="firstName"/><br/>
+                <input type="text" name="lastName"/><br/>
+                <br/>
+                <br/>
+                <input type="submit" value="submit" />
+            }
+        </section>
+    </div>
+    <hr/>
+    <div>
+        <section>
+            <h4>Pass data using Strongly Bindly</h4>
+            @using (Html.BeginForm("PostUsingStronglyBinding", "Home"))
+            {
+                @Html.TextBoxFor(x=>x.FirstName)<br/>
+                @Html.TextBoxFor(x=>x.LastName)<br/>
+                <br/>
+                <input type="submit" value="Click Me"/>
+            }
+        </section>
+    </div>
+</body>
+</html>
