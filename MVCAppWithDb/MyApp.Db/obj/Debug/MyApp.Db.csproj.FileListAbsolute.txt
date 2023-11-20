@@ -1,0 +1,14 @@
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Db.dll
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Db.pdb
+C:\C#\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.csproj.AssemblyReference.cache
+C:\C#\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.csproj.CoreCompileInputs.cache
+C:\C#\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.dll
+C:\C#\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.pdb
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Db.dll.config
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\EntityFramework.dll
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\EntityFramework.SqlServer.dll
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Model.dll
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\MyApp.Model.pdb
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\EntityFramework.xml
+C:\C#\MVCAppWithDb\MyApp.Db\bin\Debug\EntityFramework.SqlServer.xml
+C:\C#\MVCAppWithDb\MyApp.Db\obj\Debug\MyApp.Db.csproj.CopyComplete

@@ -17,6 +17,7 @@
             <h4>Fill The Form</h4>
             @using (Html.BeginForm("SubmitData", "Home", FormMethod.Post))
             {
+                @Html.ValidationSummary();
                 @Html.TextBox("FirstName")<br/>
                 @Html.ValidationMessage("FirstName")<br/>
                 @Html.TextBox("LastName")<br/>

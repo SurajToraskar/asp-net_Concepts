@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+</head>
+<body>
+    <header style="height:300px;background-color:red;color:black">
+        <h1>This is header</h1>
+        @RenderPage("~/Views/Home/Index2.cshtml","KingDestroyer","Asp.Net MVC-5",007)
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer style="height:300px;background-color:blue;color:black">
+        <h1>This is footer</h1>
+    </footer>
+</body>
+</html>
