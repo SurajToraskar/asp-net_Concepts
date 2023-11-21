@@ -1,0 +1,29 @@
+﻿@model Ajax_BeginForm_In_MVC.Models.Employee
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="margin-left:35px; display:none" id="loader">
+    <img src="~/Content/loader.gif" height="100px"  />
+</div>
+@using (Ajax.BeginForm("Index", new AjaxOptions() { OnSuccess = "fnSuccess", OnFailure = "fnFailure" ,HttpMethod="POST",LoadingElementId="loader",LoadingElementDuration=2000}))
+            {
+<div>
+    @Html.EditorFor(x => x.FirstName)<br /><br />
+    @Html.EditorFor(x => x.LastName)<br /><br />
+    @Html.EditorFor(x => x.Email)<br /><br />
+    <input type="submit" value="Click Me" />
+
+</div>
+            }
+<script>
+
+    function fnSuccess(data) {
+        console.log(data+" from fnsuccess");
+        alert("Success");
+    }
+    function fnFailure(err) {
+        console.error(err);
+        alert("Failure");
+    }
+</script>

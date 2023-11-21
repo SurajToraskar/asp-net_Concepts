@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <!--
+        <div>
+            <h1>Hello From Index</h1>
+            <h4>Id - <span id="stdId"></span></h4>
+            <h4>Name - <span id="stdName"> </span></h4>
+            <h4>Email - <span id="stdEmail"></span></h4>
+        </div>
+        <div>
+            <input type="text" id="textbox" />
+            <br /><br />
+            <label id="lbl"></label>
+            <br />
+            <button onclick="clickBtn()">Submit</button>
+        </div>
+       -->
+    </body>
+    
+
+       <form>
+           <input type="text" id="stdId" placeholder="id"/>
+           <br/>
+           <br/>
+           <input type="text" id="stdName" placeholder="Name"/>
+           <br/>
+           <br/>
+           <input type="text" id="stdEmail" placeholder="Email"/>
+           <br/>
+           <br/>
+           <input type="button" value="Send Data" onclick="clickBtn()"/>
+       </form>
+
+
+    </html>
+    <script>
+        //jQuery
+      /*  $(document).ready(function () {
+            alert("Browser is rendered completely");
+
+        }
+        )
+
+        function clickBtn() {
+            var value = $("#textbox").val();
+            $("#lbl").text(value);
+        }*/
+
+
+        function clickBtn() {
+            var id = $("#stdId").val();
+            var name = $("stdName").val();
+            var email = $("stdEmail").val();
+
+            var obj = {
+                Id: id,
+                Name: name,
+                Email:email
+
+            }
+            SubmitForm(obj);
+        }
+
+        function SubmitForm(obj) {
+            $.ajax({
+                url: "/Home/AddStudent",
+                method: "POST",
+                data:obj,
+                success: function (data) {
+                    alert("Data Received");
+                    console.log(data);
+                    data = JSON.parse(data);
+                    console.log(data);
+
+                    $("#stdId").text(data.Id);
+                    $("#stdName").text(data.Name);
+                    $("#stdEmail").text(data.Email);
+
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+        }
+
+
+
+    </script>
+

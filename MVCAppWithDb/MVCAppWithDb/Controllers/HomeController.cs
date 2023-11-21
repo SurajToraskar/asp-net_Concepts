@@ -64,6 +64,16 @@ namespace MVCAppWithDb.Controllers
 
             return View();
         }
+
+        //issue in delete
+        [HttpPost]
+        public ActionResult DeleteData(int id)
+        {
+            repository.DeleteEmployee(id);
+            return RedirectToAction("GetAllRecords");
+        }
+
+
         public string TestMethod()
         {
             return repository.GetAllEmployee().ToString();
