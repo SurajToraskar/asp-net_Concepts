@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @Html.ActionLink("Click Me ","About")
+        <h1>Hello , I am Index Action Method From HomeController</h1>
+        @Html.ActionLink("Click Me ", "Index", "Student",new {name="KingDestroyer"})
+        @Html.ActionLink("Click Here","About",new {password="Hello World!"})
+    </div>
+    <div>
+        @Html.TextBox("myTxtBox", "Enter Your Name",new {name="txt",@class="txtBox",style="width:100px,height:100px;border-radius:50px" })
+        @Html.CheckBox("chkbox",true,new {@class="chkbx",id="newchkbox"})
+    </div>
+</body>
+</html>
+
+
+
+
+
+

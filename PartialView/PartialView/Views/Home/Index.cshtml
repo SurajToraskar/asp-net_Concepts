@@ -1,0 +1,19 @@
+﻿@model IEnumerable<PartialView.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>@Model</h4>
+@{
+    ViewBag.Title = "Index";
+}
+
+@foreach (var item in Model)
+{
+    //  @Html.Partial("_Card", item)
+    Html.RenderPartial("_Card", item);
+}
+
+
+

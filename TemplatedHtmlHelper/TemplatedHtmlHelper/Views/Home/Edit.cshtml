@@ -1,0 +1,54 @@
+﻿@using TemplatedHtmlHelper.Models;
+@model Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <div>@Html.DisplayName("Name")-@Html.Editor("Name")</div>
+        <br />
+        <div>@Html.DisplayName("Id")-@Html.Editor("Id")</div>
+        <br />
+        <div>@Html.DisplayName("DateOfBirth")-@Html.Editor("DateOfBirth")</div>
+        <br />
+        <div>@Html.DisplayName("Email")-@Html.Editor("Email")</div>
+        <br />
+        <div>@Html.DisplayName("IsOnline")-@Html.Editor("IsOnline")</div>
+        <br />
+        <div>@Html.DisplayName("BirthTime")-@Html.Editor("BirthTime")</div>
+        <br />
+        <hr />
+        <div>
+            <div>@Html.DisplayNameFor(x => x.Name)-@Html.EditorFor(x => x.Name)</div>
+            <br />
+            <div>@Html.DisplayNameFor(x => x.Id)-@Html.EditorFor(x => x.Id)</div>
+            <br />
+            <div>@Html.DisplayNameFor(x => x.DateOfBirth)-@Html.EditorFor(x => x.DateOfBirth)</div>
+            <br />
+            <div>@Html.DisplayNameFor(x => x.Email)-@Html.EditorFor(x => x.Email)</div>
+            <br />
+            <div>@Html.DisplayNameFor(x => x.IsOnline)-@Html.EditorFor(x => x.IsOnline)</div>
+            <br />
+            <div>@Html.DisplayNameFor(x => x.BirthTime)-@Html.EditorFor(x => x.BirthTime)</div>
+            <br />
+            <br />
+            <hr />
+            <div>@Html.EditorForModel()</div>
+            <hr />
+            <hr />
+            @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+            {
+                @Html.EditorForModel()
+                <input type="submit" value="Submit" />
+            }
+
+
+        </div>
+    </div>
+</body>
+</html>

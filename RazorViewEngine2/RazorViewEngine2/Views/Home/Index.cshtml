@@ -1,0 +1,117 @@
+﻿@{
+    Layout = null;
+}
+@using RazorViewEngine2.Models;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Home
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div>
+        @{
+            int myVar = 2;
+        }
+
+        <div>
+            @if (myVar == 1)
+            {
+                <h1>Hello, I am from if block 1</h1>
+            }
+            else if (myVar == 2)
+            {
+                <h1>Hello,I am from if block 2</h1>
+            }
+            else if (myVar == 3)
+            {
+                <h1>Hello,I am from if block 3</h1>
+            }
+            else
+            {
+                <h1>Hello,I am from else block</h1>
+            }
+        </div>
+        <hr />
+        <div>
+            <h1>@(myVar==3?"Condition is True":"Condition is False")</h1>
+        </div>
+        <hr />
+        <div>
+            @for (int i = 0; i <= 9; i++)
+            {
+                <h1>Hello I am from loop of @i index </h1>
+            }
+        </div>
+        <hr />
+        <div>
+            @{
+                var myList = new List<int> { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+                <text>var myList=new List<int>
+                        {10,20,30,40,50,60,70,80,90,100}</text>
+            }
+    </div>
+    <div>
+        @foreach (var obj in myList)
+        {
+            <h1>The List is @obj</h1>
+        }
+    </div>
+    <div>
+        @{
+            var employee = new Employee()
+            {
+                Name = "King",
+                Id = 10
+            };
+        }
+    </div>
+    <div>@employee.Name</div>
+    <div>@employee.Id</div>
+</div>
+</div>
+</body>
+</html>

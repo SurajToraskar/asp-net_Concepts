@@ -1,0 +1,31 @@
+﻿@using stronglyTypedHtmlHelper.Models;
+@model Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("myform"))
+            {
+                @Html.TextBoxFor(x=>x.Address)
+            <br/>
+            <br/>
+            @Html.TextBoxFor(x=>x.Name)
+            <br/>
+            <br/>
+            @Html.TextBoxFor(x=>x.Id)
+            <br/>
+            <br/>
+            //error with strongly type html helpers
+
+        
+
+            } 
+    </div>
+</body>
+</html>
